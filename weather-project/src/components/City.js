@@ -1,18 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import {useWeatherData} from '../useWeatherData.js';
 
 export default function City() {
   const [city, setCity] = useState("Milwaukee");
+  const weather = useWeatherData(city);
   const refInput = useRef(null);
-  const onFormSubmit = () => {
+  const onFormSubmit = (event) => {
       setCity(refInput.current.value);
+      event.preventDefault();
   }
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `${city} Weather`;
+  });
   return (
     <>
     <h1>{city}</h1>
-    <form>
-        <label htmlFor="city">City </label> 
+    <p>{weather}</p>
+    <form onSubmit={onFormSubmit}>
+        <label htmlFor="city">City</label> 
         <input id="city" type="text" ref={refInput} />
-        <button type="button" onClick={onFormSubmit}>Get Weather</button>
+        <button type="submit">Get Weather</button>
     </form>
     </>
   )
