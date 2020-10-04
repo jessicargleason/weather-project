@@ -1,3 +1,14 @@
+/* 2xx: Thunderstorm */
+body[data-weather^="2"] {
+    background: rgba(37,37,37,1);
+    background: linear-gradient(0deg, rgba(156,156,156,1) 0%, rgba(37,37,37,1) 30%);
+    color: #fff;
+    animation: lightning ease-in-out 8s infinite;
+    @media (prefers-reduced-motion) {
+        animation: none;
+    }
+}
+
 /* 4xx: Drizzle */
 body[data-weather^="4"] {
     background: rgba(0,102,167,1);

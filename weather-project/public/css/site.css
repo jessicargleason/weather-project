@@ -95,6 +95,43 @@ h1 {
   border-width: 2px;
 }
 
+@keyframes lightning {
+  29% {
+    background: linear-gradient(0deg, #9c9c9c 0%, #252525 30%);
+    color: #fff;
+  }
+  30% {
+    background: #FFF2A7;
+    color: #000;
+  }
+  33% {
+    background: linear-gradient(0deg, #9c9c9c 0%, #252525 30%);
+    color: #fff;
+  }
+  34% {
+    background: #FFF2A7;
+    color: #000;
+  }
+  36% {
+    background: linear-gradient(0deg, #9c9c9c 0%, #252525 30%);
+    color: #fff;
+  }
+}
+
+/* 2xx: Thunderstorm */
+body[data-weather^="2"] {
+  background: #252525;
+  background: linear-gradient(0deg, #9c9c9c 0%, #252525 30%);
+  color: #fff;
+  animation: lightning ease-in-out 8s infinite;
+}
+
+@media (prefers-reduced-motion) {
+  body[data-weather^="2"] {
+    animation: none;
+  }
+}
+
 /* 4xx: Drizzle */
 body[data-weather^="4"] {
   background: #0066a7;
