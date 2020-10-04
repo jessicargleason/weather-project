@@ -19,9 +19,9 @@ export default function Weather(props) {
         document.title = `${props.city} Weather`;
         //Set the numerical weather code as the body class for styling
         if (weatherCode !== undefined) {
-            body[0].classList = weatherCode;
+            body[0].setAttribute("data-weather",weatherCode);
         } else {
-          body[0].classList = "";
+          body[0].setAttribute("data-weather","");
         }
       });
     return (

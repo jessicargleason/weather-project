@@ -13,10 +13,12 @@ body {
   font-family: 'Roboto', sans-serif;
   height: 100%;
   color: #fff;
+  transition: background-color 5s;
 }
 
 h1 {
   font-family: 'Patua One', cursive;
+  text-align: center;
   font-size: 72px;
   text-transform: uppercase;
   margin: 0;
@@ -53,7 +55,7 @@ h1 {
 }
 
 .city-search:focus {
-  outline-offset: 3px;
+  outline-offset: 5px;
 }
 
 .city-search__label {
@@ -91,4 +93,39 @@ h1 {
   outline: none;
   border-color: #000;
   border-width: 2px;
+}
+
+/* 4xx: Drizzle */
+body[data-weather^="4"] {
+  background: #0066a7;
+  background: linear-gradient(0deg, white 0%, #0066a7 30%);
+  color: #fff;
+}
+
+/* 5xx: Rain */
+body[data-weather^="5"] {
+  background: #003f68;
+  background: linear-gradient(0deg, white 0%, #003f68 30%);
+  color: #fff;
+}
+
+/* 6xx: Snow */
+body[data-weather^="6"] {
+  background: #aee1e4;
+  background: linear-gradient(90deg, #aee1e4 0%, #e1e1e1 50%, #aee1e4 100%);
+  color: #000;
+}
+
+/* 7xx: Atmosphere */
+body[data-weather^="7"] {
+  background: white;
+  background: linear-gradient(90deg, white 0%, #c5bcad 50%, white 100%);
+  color: #000;
+}
+
+/* 8xx: Clear */
+body[data-weather^="8"] {
+  background: #1dbcfd;
+  background: linear-gradient(180deg, #1dbcfd 0%, white 100%);
+  color: #000;
 }
