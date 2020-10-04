@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    margin: 0;
+    background-color: #666;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Patua One', cursive;
+    font-size: 72px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+
+.weather {
+    text-align: center;
+    font-size: 22px;
+}

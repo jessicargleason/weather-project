@@ -20,13 +20,16 @@ export default function Weather(props) {
         //Set the numerical weather code as the body class for styling
         if (weatherCode !== undefined) {
             body[0].classList = weatherCode;
+        } else {
+          body[0].classList = "";
         }
       });
     return (
-      <>
-      {weatherData !== null &&
-          <p>{temp}&deg;F and {weather}</p>
+      <div className="weather">
+      {weatherData !== null
+          ? <p>{temp}&deg;F and {weather}</p>
+          : <p>Weather Unknown</p>
       }
-      </>
+      </div>
     )
   }
