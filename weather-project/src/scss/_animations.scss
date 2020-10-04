@@ -20,3 +20,36 @@
         color: #fff;
     }
 }
+
+@keyframes drop {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+    80% {
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: 80%;
+        opacity: 0;
+    }
+}
+
+@keyframes move-in {
+    0% {
+        background-position: center -300px;
+    }
+    100% {
+        background-position: center 0;
+    }
+}
+
+@keyframes drifting {
+    0% {
+        background-position: -800px 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}

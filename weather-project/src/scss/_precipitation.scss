@@ -1,0 +1,32 @@
+.precip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: drop ease-in 1s infinite;
+}
+
+.drop:nth-child(3n) {
+    margin-top: 200px;
+}
+
+.drop:nth-child(2n) {
+    animation-delay: .3s;
+}
+
+.drop:nth-child(4n) {
+    opacity: .7;
+}

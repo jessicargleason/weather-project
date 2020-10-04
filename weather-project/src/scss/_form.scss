@@ -1,5 +1,6 @@
 .city-form {
     position: relative;
+    z-index: 2;
     margin: 50px auto;
 }
 
@@ -20,7 +21,7 @@
 
 .city-search__label {
     position: absolute;
-    left: 5px;
+    left: 10px;
     line-height: 36px;
     font-weight: bold;
     color: #000;

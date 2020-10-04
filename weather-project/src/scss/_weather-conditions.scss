@@ -9,8 +9,8 @@ body[data-weather^="2"] {
     }
 }
 
-/* 4xx: Drizzle */
-body[data-weather^="4"] {
+/* 3xx: Drizzle */
+body[data-weather^="3"] {
     background: rgba(0,102,167,1);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,102,167,1) 30%);
     color: #fff;
@@ -26,14 +26,14 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,63,104,1) 30%);
 /* 6xx: Snow */
 body[data-weather^="6"] {
     background: rgb(174,225,228);
-    background: linear-gradient(90deg, rgba(174,225,228,1) 0%, rgba(225,225,225,1) 50%, rgba(174,225,228,1) 100%);
+    background: linear-gradient(180deg, rgba(174,225,228,1) 0%, rgba(225,225,225,1) 50%, rgba(174,225,228,1) 100%);
     color: #000;
 }
 
 /* 7xx: Atmosphere */
 body[data-weather^="7"] {
     background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(197,188,173,1) 50%, rgba(255,255,255,1) 100%);
+background: linear-gradient(180deg, rgba(197,188,173,1) 0%, rgba(255,255,255,1) 80%);
     color: #000;
 }
 
@@ -42,4 +42,33 @@ body[data-weather^="8"] {
     background: rgb(29,188,253);
     background: linear-gradient(180deg, rgba(29,188,253,1) 0%, rgba(255,255,255,1) 100%);
     color: #000;
+}
+
+/* Cloudy Conditions */
+body[data-weather^="2"], 
+body[data-weather^="3"], 
+body[data-weather^="5"], 
+body[data-weather^="6"],
+body[data-weather="801"],
+body[data-weather="802"],
+body[data-weather="803"],
+body[data-weather="804"] {
+    .container {
+        background-image: url(/clouds.png);
+        background-repeat: repeat-x;
+        background-position: top center;
+        animation: move-in ease-in 1s forwards;
+    }
+}
+
+/* Moving Clouds */
+body[data-weather="801"],
+body[data-weather="802"],
+body[data-weather="803"],
+body[data-weather="804"] {
+    .container {
+        //wait for clouds to come in first
+        animation-delay: 1.2s;
+        animation: drifting linear 15s infinite;
+    }
 }
