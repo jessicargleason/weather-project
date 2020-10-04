@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {useWeatherData} from '../useWeatherData.js';
+import Weather from "./Weather.js";
 
 export default function City() {
   const [city, setCity] = useState("Milwaukee");
-  const weather = useWeatherData(city);
   const refInput = useRef(null);
   const onFormSubmit = (event) => {
       setCity(refInput.current.value);
@@ -12,11 +11,11 @@ export default function City() {
   useEffect(() => {
     // Update the document title using the browser API
     document.title = `${city} Weather`;
-  });
+  },[city]);
   return (
     <>
     <h1>{city}</h1>
-    <p>{weather}</p>
+    <Weather city={city} />
     <form onSubmit={onFormSubmit}>
         <label htmlFor="city">City</label> 
         <input id="city" type="text" ref={refInput} />
