@@ -54,7 +54,7 @@ body[data-weather="802"],
 body[data-weather="803"],
 body[data-weather="804"] {
     .container {
-        background-image: url(/clouds.png);
+        background-image: url(../clouds.png);
         background-repeat: repeat-x;
         background-position: top center;
         animation: move-in ease-in 1s forwards;
