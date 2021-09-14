@@ -1,9 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Weather from "./Weather.js";
+import React, { useState, createRef, useEffect } from 'react';
+import Weather from "../Weather";
+import City from "./City";
 
-export default function City() {
+export default function Form() {
   const [city, setCity] = useState("Milwaukee");
-  const refInput = useRef(null);
+  const refInput = createRef();
   const onFormSubmit = (event) => {
     if (refInput.current.value !== "") {
       setCity(refInput.current.value);
@@ -22,7 +23,7 @@ export default function City() {
     <Weather city={city} />
     <form onSubmit={onFormSubmit} className="city-form">
         <label htmlFor="city" className="city-search__label">City</label> 
-        <input id="city" type="text" className="city-search" placeholder="Milwaukee" ref={refInput} />
+        <City ref={refInput} />
         <button type="submit" className="city-search__submit">Get Weather</button>
     </form>
     </>

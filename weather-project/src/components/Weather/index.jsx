@@ -1,5 +1,6 @@
 import React,  { useEffect } from 'react';
-import {useWeatherData} from '../useWeatherData.js';
+import {useWeatherData} from './useWeatherData';
+import Precipitation from './Precipitation';
 
 export default function Weather(props) {
     //go get weather data from API
@@ -44,20 +45,7 @@ export default function Weather(props) {
       }
       </div>
       {isPrecipitation &&
-        <div className="precip" aria-hidden="true">
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-          <span className="drop"></span>
-        </div>
+        <Precipitation />
       }
       </>
     )

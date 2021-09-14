@@ -1,10 +1,10 @@
 import React from 'react';
-import City from './components/City.js';
+import Form from './components/Form/index.jsx';
 
 function App() {
   return (
     <div className="App">
-      <City />
+      <Form />
     </div>
   );
 }
