@@ -10,14 +10,14 @@ html {
 body {
   margin: 0;
   background-color: #666;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100%;
   color: #fff;
   transition: background-color 5s;
 }
 
 h1 {
-  font-family: 'Patua One', cursive;
+  font-family: "Patua One", cursive;
   text-align: center;
   font-size: 72px;
   text-transform: uppercase;
@@ -55,7 +55,6 @@ h1 {
   border: none;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
-
 .city-search:focus {
   outline-offset: 5px;
 }
@@ -69,7 +68,7 @@ h1 {
 }
 
 .city-search__submit {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   position: absolute;
   right: 1px;
@@ -81,15 +80,13 @@ h1 {
   color: #000;
   padding-left: 10px;
   padding-right: 10px;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   font-weight: 700;
   cursor: pointer;
 }
-
 .city-search__submit:hover {
   background-color: #A1C820;
 }
-
 .city-search__submit:focus {
   background-color: #EACD10;
   outline: none;
@@ -119,7 +116,6 @@ h1 {
     color: #fff;
   }
 }
-
 @keyframes drop {
   0% {
     top: 0%;
@@ -134,7 +130,6 @@ h1 {
     opacity: 0;
   }
 }
-
 @keyframes move-in {
   0% {
     background-position: center -300px;
@@ -143,7 +138,6 @@ h1 {
     background-position: center 0;
   }
 }
-
 @keyframes drifting {
   0% {
     background-position: -800px 0;
@@ -152,7 +146,6 @@ h1 {
     background-position: 0 0;
   }
 }
-
 /* 2xx: Thunderstorm */
 body[data-weather^="2"] {
   background: #252525;
@@ -160,7 +153,6 @@ body[data-weather^="2"] {
   color: #fff;
   animation: lightning ease-in-out 8s infinite;
 }
-
 @media (prefers-reduced-motion) {
   body[data-weather^="2"] {
     animation: none;
@@ -252,9 +244,11 @@ body[data-weather="804"] .container {
 }
 
 .drop:nth-child(2n) {
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 
 .drop:nth-child(4n) {
-  opacity: .7;
+  opacity: 0.7;
 }
+
+/*# sourceMappingURL=site.css.map */
